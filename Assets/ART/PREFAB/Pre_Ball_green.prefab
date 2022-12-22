@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5952759761018516600}
   - component: {fileID: 1423736845877130651}
   - component: {fileID: 6802684987992233983}
+  - component: {fileID: 358697068427406894}
   m_Layer: 0
   m_Name: Pre_Ball_green
   m_TagString: Player
@@ -92,7 +93,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5304271719652971949}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: d75cd33496ebe0d45b613522c9015aa2, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -109,8 +110,25 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0.5
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
+--- !u!114 &358697068427406894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5304271719652971949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4199194eec4d84141b08b0c904c27219, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ball: 8
+  _prefab: {fileID: 5304271719652971949, guid: 3bc3cc5e9553133459268e17dfb8bfb3, type: 3}
+  speed: 2000
+  ballCounter: 1
+  isCamOn: 0
