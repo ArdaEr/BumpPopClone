@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ThrowingBall : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class ThrowingBall : MonoBehaviour
     Ray ray;
     RaycastHit raycastHit;
     Rigidbody _rigidbody;
+
     
 
     private void Start() {
@@ -21,7 +23,7 @@ public class ThrowingBall : MonoBehaviour
     void LinerendererCalculate()
     {
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if(Physics.Raycast(ray, out raycastHit, 100) && GameManager.Instance.isCamOn == false)
+        if(Physics.Raycast(ray, out raycastHit, 100) && GameManager.Instance.isStart == true)
         {
             lineRenderer.enabled = true;
             lineRenderer.SetPosition(0, transform.position);
@@ -34,11 +36,13 @@ public class ThrowingBall : MonoBehaviour
     }
     void DragDrop()
     {
-        if(Input.GetMouseButtonDown(1))
+        if(Input.GetMouseButtonDown(1) && GameManager.Instance.isStart == true)
         {
+            GameManager.Instance.ReplayButton();
             GameManager.Instance.isCamOn = true;
             //_rigidbody.isKinematic = false;
             _rigidbody.AddForce(ray.direction * addForce);
+            GameManager.Instance.isStart = false;
         }
     }
 }

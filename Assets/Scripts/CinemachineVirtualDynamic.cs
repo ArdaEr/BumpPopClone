@@ -48,8 +48,8 @@ public class CinemachineVirtualDynamic : MonoBehaviour
     {
         if(GameManager.Instance.isCamOn == true)
         {
-        cinemachineVirtualCamera.Follow = target;
-        cinemachineVirtualCamera.LookAt = target;
+            cinemachineVirtualCamera.Follow = target;
+            cinemachineVirtualCamera.LookAt = target;
         }
     }
 }

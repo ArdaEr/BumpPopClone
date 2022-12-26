@@ -127,8 +127,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4199194eec4d84141b08b0c904c27219, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ball: 8
   _prefab: {fileID: 5304271719652971949, guid: cd264390e6a266846ae568f98d7c5339, type: 3}
-  speed: 2000
-  ballCounter: 1
-  isCamOn: 0
+  speed: 2500
